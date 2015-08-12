@@ -5,6 +5,8 @@ Neste capítulo são abordadas as tecnologias e conceitos necessários para a co
 
 \section{MICROSERVICES}
 
+// TODO: fazer a fundamentação sobre microservices, usar livro do Newman
+
 \section{AUTOMAÇÃO DE TESTES}
 
 Para garantir a qualidade dos \textit{microservices}, os mesmos devem ser amplamente testados. Normalmente no processo de desenvolvimento de \textit{software} existe uma fase de testes, que após a codificação, visa a garantia de qualidade e que o código gerado esteja funcionando como o esperado. Entretanto, com o crescimento do \textit{software} e com o aumento de sua complexidade, tornam a etapa de testes custosas. Dessa forma, a automação de testes surge como uma alternativa para minimizar os custos dessa etapa e agilizar o processo de desenvolvimento sem lesar a qualidade. Segundo \citeonline{bernardo2008importancia}, a grande vantagem desta abordagem, é que todos os casos de teste podem ser facilmente e rapidamente repetidos a qualquer momento e com pouco esforço.
@@ -19,6 +21,12 @@ Para \citeonline{pressman}, um teste unitário focaliza o esforço de verificaç
 
 \subsection{Testes de Integração}
 
+Diferente dos testes unitários, que verificam as menores únidades do \textit{software}, os testes de integração verifica que a comunicação entre duas ou mais únidades funcionam corretamente. Para \citeonline{pressman} os testes de integração são técnicas sistemáticas para construir software e ao mesmo tempo que conduz testes para descobrir erros associados as interfaces.
+
 \section{INTEGRAÇÃO CONTINUA}
+
+Integração contínua, é uma técnica utilizado no processo de desenvolvimento de software, que exige que a aplicação seja integrada frequentemente, sendo que esta é uma das práticas adotadas pelo eXtreme Programming. Esta técnica requer que os desenvolvedores enviem suas alterações para o repositório e integrem a aplicação sempre que possível, e que nunca mantenham suas alterações por mais de um dia \cite{wells}. 
+
+Basicamente, a integração contínua foi concebida para detectar problemas de compatibilidade antecipadamente, desta forma, minimizar os problemas causados pela junção dos trabalhos de equipes diferentes. Entretanto, a integração contínua pode ser muito mais do que isso, ela pode por exemplo, monitorar a "saúde"  da base de código, executando métricas de qualidade e de cobertura, e assim, ajudar a manter o débito técnico e os custos com manutenção baixos.
 
 \section{AUTOMAÇÃO DE DEPLOY}
