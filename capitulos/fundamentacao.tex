@@ -17,7 +17,7 @@ Com a finalidade de garantir a qualidade dos \textit{microservices} e garantir o
 
 \subsection{Testes Unitários}
 
-Para \citeonline{pressman}, um teste unitário focaliza o esforço de verificação na menor unidade de projeto de \textit{software}. Deste modo, por testar pequenas partes isoladas do \textit{software} os testes unitários podem ser de grande valor para a garantia de qualidade do código. Além disso, segundo \citeonline{bernardo2008importancia}, o teste de uma unidade é o tipo mais importante de teste para a grande maioria das situações, já que é ele que deve testar se um algoritmo faz o que deveria ser feito e garantir que o código encapsulado por uma unidade deve produzir o efeito colateral esperado.
+Os testes unitários serão utilizados para testar pontualmente, todas partes do \textit{microseervice}. Para \citeonline{pressman}, um teste unitário focaliza o esforço de verificação na menor unidade de projeto de \textit{software}. Deste modo, por testar pequenas partes isoladas do \textit{software} os testes unitários podem ser de grande valor para a garantia de qualidade do código. Além disso, segundo \citeonline{bernardo2008importancia}, o teste de uma unidade é o tipo mais importante de teste para a grande maioria das situações, já que é ele que deve testar se um algoritmo faz o que deveria ser feito e garantir que o código encapsulado por uma unidade deve produzir o efeito colateral esperado.
 
 \subsection{Testes de Integração}
 
@@ -25,8 +25,20 @@ Diferente dos testes unitários, que verificam as menores únidades do \textit{s
 
 \section{INTEGRAÇÃO CONTINUA}
 
-Integração contínua, é uma técnica utilizado no processo de desenvolvimento de software, que exige que a aplicação seja integrada frequentemente, sendo que esta é uma das práticas adotadas pelo eXtreme Programming. Esta técnica requer que os desenvolvedores enviem suas alterações para o repositório e integrem a aplicação sempre que possível, e que nunca mantenham suas alterações por mais de um dia \cite{wells}. 
+Tento o \textit{software} coberto de testes, é necessário que os mesmos sejam executados constantemente. Para isso pode ser utilizada a integração contínua. Basicamente, a integração continua é uma técnica utilizado no processo de desenvolvimento de software, que exige que a aplicação seja integrada frequentemente, sendo que esta é uma das práticas adotadas pelo \textit{eXtreme Programming}. Esta técnica requer que os desenvolvedores enviem suas alterações para o repositório e integrem a aplicação sempre que possível, e que nunca mantenham suas alterações por mais de um dia \cite{wells}. 
 
 Basicamente, a integração contínua foi concebida para detectar problemas de compatibilidade antecipadamente, desta forma, minimizar os problemas causados pela junção dos trabalhos de equipes diferentes. Entretanto, a integração contínua pode ser muito mais do que isso, ela pode por exemplo, monitorar a "saúde"  da base de código, executando métricas de qualidade e de cobertura, e assim, ajudar a manter o débito técnico e os custos com manutenção baixos.
 
-\section{AUTOMAÇÃO DE DEPLOY}
+\section{CONTINUOUS DELIVERY}
+
+Após ter o \textit{software} coberto de testes, e os mesmos sendo executados constantementes pelo processo de integração continua, pode-se dizer que o processo de desenvolvimento de \textit{software} é facilitado, pois é possivel descobrir com antecedência, através dos resultados dos testes automatizados, se as alterações não quebraram o \textit{software}. Entretanto, para se trabalhar com diversos \textit{isso} não é o suficiente. Supondo que uma empresa tenha dezenas ou centenas de \textit{microservices}, o custo para liberação de um conjunto de alterações pode ser bastante alto, caso o \textit{deploy} seja manual. Para evitar este problema é necessário que o \textit{deploy} seja automatizado e executados constantemente. Segundo \citeonline{brian}, isso implica que as novas funcionalidades são liberadas assim que elas sejam finalizadas. Além disso os autores enfatizam que esta eficiência e prática de liberações fequentes tem se toranado comum, principalmente nas comunidades \textit{open source}.
+
+Está prática é conhecida como \textit{continuous delivery} e consiste em desenvolvter o \textit{sftware} de tal forma, que ele possa ser liberado em produção a qualquer momento. Sendo que e os principais beneficios desta tequina são, segundo \citeonline{fowler:01}:
+
+\begin{citacao}
+\begin{itemize}
+\item \textbf{Reduzir os custos de liberação:} desde que sejam liberadas pequenas alterações, há menos para dar errado e deverá ser mais fácil corrigir um problema quando ele aparecer.
+\item \textbf{Progresso Acreditável:} muitas pessoas acompanham o progresso pelo rastreamento de tarefas feitas. Se "feito" significar "o desenvolvedor afirmou que a tarefa está pronta", isso é muito menos acreditável do que estivesse liberado em produção. 
+\item \textbf{\textit{Feedback} de usuários:} O maior risco no desenvolvimento de \textit{software} é o criar algo que inútil. O quanto antes uma funcionalidade for liberada, mais rápido será o \textit{feedback} para ver o quão valiosa a funcionalidade realmente é.
+\end{itemize}
+\end{citacao}
